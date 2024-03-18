@@ -15,6 +15,7 @@ import { initalAssetRequest, initalAssets, initalDepartments, initalMaintenanceR
 import { Asset } from "../../Domain/Asset/Asset";
 import { AssetMaintenanceRequest } from "../../Domain/Maintenance/AssetMaintenanceRequest";
 import { AssetRequest } from "../../Domain/AssetRequest/AssetRequest";
+import EditStaff from "./EditStaff";
 // import Department, { initalDepartments } from "./Department"
 const initalStaffs = [
     {
@@ -129,6 +130,12 @@ function StaffDetail() {
     const [assetRequests,setAssetRequest] = useState<AssetRequest[]>([])
 
     const [index,setIndex]=useState(0);
+    const [isEditModal,setIsEditModalOpen] = useState(false);
+
+    const handleEditClicked = (){
+        setIsEditModalOpen(m=>m=!isEditModal)
+    }
+
     const handleClicked = (value:number)=>{
         setIndex((i)=>i=value)
     }
@@ -198,118 +205,7 @@ function StaffDetail() {
 									className='modal-content custom-property'
 									overlayClassName='modal-overlay'
 								>
-									<h2> Edit User </h2>
-									<div className='inputs'>
-										<h4>Employee ID</h4>
-										<input placeholder='Enter ID' />
-										<h4>Email</h4>
-										<input type='email' placeholder='Enter Property Name' />
-										<div className='row'>
-											<div
-												className='input-container'
-												style={{
-													width: "12em",
-													marginLeft: "20px",
-													backgroundColor: "white",
-													padding: "0px 10px",
-													borderRadius: "8px",
-													boxShadow: " 0px 2px 4px rgba(0, 0, 0, 0.322)",
-												}}
-											>
-												<input
-													type='text'
-													placeholder='Select Departement'
-													value={selectedOption}
-													readOnly
-													onClick={() => setDropdownOpen(!isDropdownOpen)}
-												/>
-												<div
-													className='dropdown-arrow'
-													onClick={() => setDropdownOpen(!isDropdownOpen)}
-												>
-													<IoIosArrowDown />
-												</div>
-												{isDropdownOpen && (
-													<ul
-														className='options-list'
-														style={{ top: "33.7em" }}
-													>
-														{options.map((option) => (
-															<li
-																key={option}
-																// onClick={() => handleOptionClick(option)}
-															>
-																{option}
-															</li>
-														))}
-													</ul>
-												)}
-											</div>
-											<div
-												className='input-container'
-												style={{
-													width: "12em",
-													marginLeft: "80px",
-													backgroundColor: "white",
-													padding: "0px 10px",
-													borderRadius: "8px",
-													boxShadow: " 0px 2px 4px rgba(0, 0, 0, 0.322)",
-												}}
-											>
-												<input
-													type='text'
-													placeholder='Select roles'
-													value={selectedOption}
-													readOnly
-													onClick={() => setDropdownOpen(!isDropdownOpen)}
-												/>
-												<div
-													className='dropdown-arrow'
-													onClick={() => setDropdownOpen(!isDropdownOpen)}
-												>
-													<IoIosArrowDown />
-												</div>
-												{isDropdownOpen && (
-													<ul
-														className='options-list'
-														style={{ top: "33.7em" }}
-													>
-														{options.map((option) => (
-															<li
-																key={option}
-																// onClick={() => handleOptionClick(option)}
-															>
-																{option}
-															</li>
-														))}
-													</ul>
-												)}
-											</div>
-										</div>
-										<div className='buttons'>
-											<button
-												onClick={() => setIsModalOpenThree(false)}
-												style={{
-													color: "white",
-													backgroundColor: "black",
-													marginRight: "16em",
-												}}
-											>
-												Cancel
-											</button>
-											<Link to='/property'>
-												<button
-													style={{
-														color: "black",
-														backgroundColor: "white",
-														marginRight: "16em",
-													}}
-												>
-													Save
-												</button>
-											</Link>
-										</div>
-									</div>
+									<EditStaff handlModal={handleModal}/>
 								</ReactModal>
 							</div>
 						)}

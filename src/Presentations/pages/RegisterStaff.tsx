@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { Role } from "../../Domain/User/User";
 import { initalDepartments } from "../../Domain/list";
 import { useState } from "react";
+import DepartmentDropDown from "../components/DepartmentDropDown";
+import RolesDropDown from "../components/RolesDropDown";
 interface RegisterProps{
     handlModal : ()=>void
 }
@@ -60,85 +62,11 @@ function RegisterStaff(props:RegisterProps){
     </div>
 
 }
+
 interface Props{
     isOpen:boolean,
     toggleDropdown:()=>void
   
 }
 
-function RolesDropDown(props:Props){
-    
-    const options = [Role.Admin,Role.Manager,Role.User];
-    const selectedOption =Role[options[0]];
-
-    
-    return(
-    <div className="adjust-option" onClick={(e) => e.stopPropagation()}>
-     <div className='input-container option-select'>
-    <input
-    style={{
-        cursor:"pointer"
-    }}
-        type='text'
-        placeholder='Select role'
-        // value={selectedOption}
-      onClick={() => props.toggleDropdown()}
-    />
-    {props.isOpen ? <IoIosArrowUp /> :<IoIosArrowDown />} 
-    </div>
-     
-     {props.isOpen && (
-        <ul className='options-list'>
-            {options.map((option) => (
-                <li
-                    key={option}
-                    // onClick={() => handleOptionClick(option)}
-                >
-                    {Role[option]}
-                </li>
-            ))}
-        </ul>
-    )}   
-    
-</div>)
-
-}
-
-
-function DepartmentDropDown(props:Props){
-    const options = initalDepartments;
-    const selectedOption =initalDepartments[0];
-    const [isDepOpen,setDepOpen] = useState(false);
-    const toggleDepDropdown = () => setDepOpen(!isDepOpen);
-
-    return(
-    <div className="adjust-option" onClick={(e) => e.stopPropagation()} >
-     <div className='input-container option-select'>
-    <input
-    style={{
-        cursor:"pointer"
-    }}
-        type='text'
-        placeholder='Select Department'
-        // value={selectedOption.name}
-      onClick={() => props.toggleDropdown()}
-    />
-    {props.isOpen ? <IoIosArrowUp /> :<IoIosArrowDown />} 
-    </div>
-     
-     {props.isOpen && (
-        <ul className='options-list'>
-            {options.map((option) => (
-                <li
-                    key={option.id}
-                    // onClick={() => handleOptionClick(option)}
-                >
-                    {option.name}
-                </li>
-            ))}
-        </ul>
-    )}   
-    
-</div>)
-}
 export default RegisterStaff
