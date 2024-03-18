@@ -1,0 +1,21 @@
+[
+    {
+      "id": "assetReq001",
+      "createDatetime": "2024-03-14T09:30:00Z",
+      "user": "user456",
+      "type": "Laptop",
+      "quantity": 10,
+      "resolveDatetime": "2024-03-15T16:00:00Z",
+      "approved": true,
+      "isResolved": true
+    },
+    {
+      "id": "assetReq002",
+      "createDatetime": "2024-03-16T10:00:00Z",
+      "user": "user789",
+      "type": "Projector",
+      "quantity": 5,
+      "isResolved": false
+    }
+  ]
+  

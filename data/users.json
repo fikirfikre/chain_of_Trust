@@ -1,0 +1,19 @@
+[
+    {
+      "id": "user456",
+      "email": "jane.doe@copilottech.com",
+      "firstName": "Jane ",
+      "lastName":"Doe",
+      "roles": ["Admin"],
+      "organizationId": "org123"
+    },
+    {
+      "id": "user789",
+      "email": "john.smith@copilottech.com",
+      "firstName": "John ",
+      "lastName" : "Smith",
+      "roles": ["User"],
+      "organizationId": "org123"
+    }
+  ]
+  

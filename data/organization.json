@@ -1,0 +1,21 @@
+{
+    "id": "org123",
+    "name": "Copilot Technologies",
+    "users": [
+      {
+        "id": "user456",
+        "email": "jane.doe@copilottech.com",
+        "fullName": "Jane Doe",
+        "roles": ["Admin"],
+        "organizationId": "org123"
+      },
+      {
+        "id": "user789",
+        "email": "john.smith@copilottech.com",
+        "fullName": "John Smith",
+        "roles": ["User"],
+        "organizationId": "org123"
+      }
+    ]
+  }
+  

@@ -1,0 +1,21 @@
+[
+    {
+      "id": "maintReq001",
+      "createDatetime": "2024-03-17T11:00:00Z",
+      "user": "user456",
+      "asset": "asset001",
+      "resolveDatetime": null,
+      "approved": false,
+      "isResolved": false
+    },
+    {
+      "id": "maintReq002",
+      "createDatetime": "2024-03-18T14:00:00Z",
+      "user": "user789",
+      "asset": "asset002",
+      "resolveDatetime": "2024-03-19T17:00:00Z",
+      "approved": true,
+      "isResolved": true
+    }
+  ]
+  

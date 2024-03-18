@@ -1,0 +1,117 @@
+{
+    "assetrequest":[
+        {
+          "id": "assetReq001",
+          "createDatetime": "2024-03-14T09:30:00Z",
+          "user": "user456",
+          "type": "Laptop",
+          "quantity": 10,
+          "resolveDatetime": "2024-03-15T16:00:00Z",
+          "approved": true,
+          "isResolved": true
+        },
+        {
+          "id": "assetReq002",
+          "createDatetime": "2024-03-16T10:00:00Z",
+          "user": "user789",
+          "type": "Projector",
+          "quantity": 5,
+          "isResolved": false
+        }
+      ],
+      "assetMaintenancerequest":[
+        {
+          "id": "maintReq001",
+          "createDatetime": "2024-03-17T11:00:00Z",
+          "user": "user456",
+          "asset": "asset001",
+          "resolveDatetime": null,
+          "approved": false,
+          "isResolved": false
+        },
+        {
+          "id": "maintReq002",
+          "createDatetime": "2024-03-18T14:00:00Z",
+          "user": "user789",
+          "asset": "asset002",
+          "resolveDatetime": "2024-03-19T17:00:00Z",
+          "approved": true,
+          "isResolved": true
+        }
+      ],
+      "assets":[
+        {
+          "id": "asset001",
+          "type": "Laptop",
+          "addDateTime": "2024-03-12T09:00:00Z",
+          "owner": "user456",
+          "active": true
+        },
+        {
+          "id": "asset002",
+          "type": "Projector",
+          "addDateTime": "2024-03-12T10:00:00Z",
+          "owner": "user789",
+          "active": false
+        }
+      ]
+      ,
+      "departments":[
+        {
+          "id": "dept001",
+          "name": "Research and Development",
+          "manager": "user456"
+        },
+        {
+          "id": "dept002",
+          "name": "Human Resources",
+          "manager": "user789"
+        }
+      ],
+      "organizations":[
+        {
+            "id": "org123",
+            "name": "Copilot Technologies",
+            "users": [
+              {
+                "id": "user456",
+                "email": "jane.doe@copilottech.com",
+                "fullName": "Jane Doe",
+                "roles": ["Admin"],
+                "organizationId": "org123"
+              },
+              {
+                "id": "user789",
+                "email": "john.smith@copilottech.com",
+                "fullName": "John Smith",
+                "roles": ["User"],
+                "organizationId": "org123"
+              }
+            ]
+          }
+      ],
+      "users":[
+        {
+          "id": "user456",
+          "email": "jane.doe@copilottech.com",
+          "firstName": "Jane ",
+          "lastName":"Doe",
+          "roles": ["Admin"],
+          "organizationId": "org123"
+        },
+        {
+          "id": "user789",
+          "email": "john.smith@copilottech.com",
+          "firstName": "John ",
+          "lastName" : "Smith",
+          "roles": ["User"],
+          "organizationId": "org123"
+        }
+      ],
+      "statistics":[]
+      
+    
+    
+
+      
+}

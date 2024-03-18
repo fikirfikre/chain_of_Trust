@@ -1,0 +1,13 @@
+[
+    {
+      "id": "dept001",
+      "name": "Research and Development",
+      "manager": "user456"
+    },
+    {
+      "id": "dept002",
+      "name": "Human Resources",
+      "manager": "user789"
+    }
+  ]
+  
