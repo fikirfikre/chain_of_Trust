@@ -132,7 +132,7 @@ function StaffDetail() {
     const [index,setIndex]=useState(0);
     const [isEditModal,setIsEditModalOpen] = useState(false);
 
-    const handleEditClicked = (){
+    const handleEditClicked = ()=>{
         setIsEditModalOpen(m=>m=!isEditModal)
     }
 
@@ -197,18 +197,17 @@ function StaffDetail() {
 							Delete
 						</button>
                         </div>
-						{isModalOpenThree && (
-							<div className='modal-overlay'>
+						
 								<ReactModal
 									isOpen={isModalOpenThree}
 									onRequestClose={() => setIsModalOpenThree(false)}
 									className='modal-content custom-property'
 									overlayClassName='modal-overlay'
 								>
-									<EditStaff handlModal={handleModal}/>
+									<EditStaff handlModal={handleEditClicked}/>
 								</ReactModal>
-							</div>
-						)}
+							
+					
 					
 						{isModalOpenTwo && (
 							<div className='modal-overlay'>
